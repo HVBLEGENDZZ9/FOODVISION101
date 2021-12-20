@@ -45,13 +45,13 @@ def plot_confusion_matrix(cm,class_names,figsize=(12,12)):
   import matplotlib.pyplot as plt
   import seaborn as sns
   plt.figure(figsize=figsize)
-  sns.heatmap(cm/np.sum(cm),
+  sns.heatmap(cm,
               annot=True,
-              fmt='.2%',
-              linewidths = 0.5,
+              fmt='.2f',
+              linewidths = 0.25,
               square=True,
               cbar = True,
-              cmap = "Blues_r",
+              cmap = "Blues",
               xticklabels=class_names,
               yticklabels=class_names
               )
